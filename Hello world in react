@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
+    <script>
+        const heading=React.createElement("h1",{},"Hello world from React!"); 
+        //creating h1 tag inside react, thats a core react thing.
+        const root=ReactDom.createRoot(document.getElementById("root")); 
+        //react needs a root where it can do DOM manipulations and stuff.when we need to put h1 into browser or dom we use reactdom.
+        root.render(heading);
+         //react injects h1 into root
+    </script>
+</body>
+</html>
