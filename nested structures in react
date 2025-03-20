@@ -1,0 +1,33 @@
+/*<div id="parent">
+    <div id="child">
+        <h1>i am h1 tag</h1>
+        <h2>i am h2 tag</h2> if we wnted to give siblings inside div then we wrap thw two(h1,h2) inside array
+    </div>
+  </div>
+  creating nested 
+*/
+**createElelement takes 3 arguments those are (element type,object,what should be passed inside element)
+
+
+
+const parent = React.createElement(
+    "div",
+    {id:"parent"},
+    React.createElement(
+        "div",
+        {id:"child"},
+        [React.createElement(
+            "h1",{},"i am h1 tag"),React.createElement(
+                "h2",{},"i am h2 tag")]
+            )
+        );
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
+
+
+
+//react element is nothing but javascript object
+//parent is not html, it is just an object...this object is react element.
+//ReactElement(object=parent)=>HTML(browser understands)
+//react object becomes html that the browser understands.
+//never think create element creates html.It creates object while it is rendering into the DOM it converts itself into that html and puts that into DOM.
